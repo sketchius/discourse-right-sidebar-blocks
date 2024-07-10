@@ -11,7 +11,8 @@ export default class TopContributors extends Component {
 
   constructor() {
     super(...arguments);
-
+    console.log(this);
+    
     ajax(this.requestURL).then((data) => {
       this.topContributors = data.directory_items?.slice(0, this.count);
     });
